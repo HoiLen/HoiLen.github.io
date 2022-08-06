@@ -1,0 +1,10 @@
+div {
+	background-color:rgb(92, 135, 156);
+	padding: 40px;
+	border-width: thick;
+	border-style: dotted;
+	border-top-color: tan;
+}
+#momo {
+	color:fuchsia;
+}
