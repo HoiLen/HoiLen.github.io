@@ -91,13 +91,13 @@ h1 {
 /* ボタン */
 .button {
 	font-size: 1.375rem;
-	background: #0bd;
+	background: rgb(36, 36, 36);
 	color:#fff;
 	border-radius: 5px;
 	padding:18px 32px;
 }
 .button:hover {
-	background: #0090aa;;
+	background: #000000;;
 }
 
 .sns-content {
