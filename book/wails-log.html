@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>HOME - HoiLenBook</title>
+        <title>wails-log - HoiLenBook</title>
 
 
         <!-- Custom HTML head -->
@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="home.html" class="active"><strong aria-hidden="true">1.</strong> HOME</a></li><li class="chapter-item expanded "><a href="wails-log.html"><strong aria-hidden="true">2.</strong> wails-log</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="home.html"><strong aria-hidden="true">1.</strong> HOME</a></li><li class="chapter-item expanded "><a href="wails-log.html" class="active"><strong aria-hidden="true">2.</strong> wails-log</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -144,20 +144,45 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="hoilen-tech-blog"><a class="header" href="#hoilen-tech-blog">HoiLen Tech Blog</a></h1>
-<h2 id="このサイトの記事について"><a class="header" href="#このサイトの記事について">このサイトの記事について</a></h2>
+                        <h1 id="golangとwailsで簡単なアプリを作ってみた"><a class="header" href="#golangとwailsで簡単なアプリを作ってみた">Golangとwailsで簡単なアプリを作ってみた．</a></h1>
+<p>https://wails.io/ja/docs/gettingstarted/installation</p>
 <ul>
-<li>このサイトの記事は，Webやプログラミングについての知識，試行錯誤や研究について再現可能な形で書き残しています．</li>
+<li>とりあえずこの公式チュートリアルサイトから環境構築し，ひとまずtypescriptのテストアプリケーションの実行まで行けた．</li>
+<li>ここからたくさん弄り倒して使い勝手を確認したい．</li>
+</ul>
+<pre><code class="language-go">go install github.com/wailsapp/wails/v2/cmd/wails@latest
+</code></pre>
+<p>これでwailsをインストール</p>
+<pre><code class="language-go">wails doctor
+</code></pre>
+<p>これでwailsがインストールされているかを確認する</p>
+<h2 id="mdb-react-ui-kitのインストール"><a class="header" href="#mdb-react-ui-kitのインストール">mdb-react-ui-kitのインストール</a></h2>
+<ul>
+<li>
+<p>uiの開発効率を上げるため，mdb-react-ui-kitというライブラリをインストールする</p>
+<p>まずはnpmコマンドでインストールする</p>
+<pre><code class="language-bash">npm i mdb-react-ui-kit
+</code></pre>
+<p>fontawesomeをダウンロード</p>
+<pre><code class="language-bash">npm i @fortawesome/fontawesome-free
+</code></pre>
+<p>/frontend/src/<strong>main.tsx</strong>に以下のコードを追記し，mdb-react-ui-kitのstyle関係のファイルをインポートする．</p>
+<pre><code class="language-css">import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import &quot;@fortawesome/fontawesome-free/css/all.min.css&quot;;
+</code></pre>
+<p>https://mdbootstrap.com/docs/react/#demo</p>
+<p>このサイトを参考に色んなUIを実装できる．</p>
+</li>
 </ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-
-                            <a rel="next" href="wails-log.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
+                            <a rel="prev" href="home.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
                             </a>
+
 
                         <div style="clear: both"></div>
                     </nav>
@@ -165,10 +190,10 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-
-                    <a rel="next" href="wails-log.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
+                    <a rel="prev" href="home.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
                     </a>
+
             </nav>
 
         </div>
